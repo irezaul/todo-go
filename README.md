@@ -3,7 +3,7 @@ A simply activity
 
 
 ### Couchbase install -- >
-##On Ubuntu 22.04;
+## On Ubuntu 22.04;
 #### First run this command
 ```bash
 echo 'deb [ arch=amd64 ] http://packages.couchbase.com/releases/couchbase-server/community/deb/ focal focal/main' \
