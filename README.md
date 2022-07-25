@@ -23,3 +23,6 @@ wget -qO- http://packages.couchbase.com/ubuntu/couchbase.key | gpg --dearmor > /
 ```bash
 apt install couchbase-server-community
 ```
+###  Now check couchbase install or not open your browser and type `localhost:8091`
+
+![couchebase-install-done](https://user-images.githubusercontent.com/77927449/180840578-73a9977a-82e9-48ee-a343-5bccf9c926c8.png)
