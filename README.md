@@ -27,18 +27,7 @@ psql
 ```bash
 \q
 ```
-###  Creating a New Role
-* If you are logged in as the postgres account, you can create a new user by typing:
+###  Creating a New Database
 ```bash
-createuser <username>
-```
-#### Important- ( Currently, you just have the postgres role configured within the database. You can create new roles from the command line with the `createrole` command. The `--interactive` flag will prompt you for the name of the new role and also ask whether it should have superuser permissions. )
-
-* if, instead, you prefer to use sudo for each command without switching from your normal account, type:
-```bash
-sudo -u postgres createuser <username>
-```
-* Creating Database
-```bash
-sudo -u postgres createdb <dbname>
+create database <dbname>
 ```
