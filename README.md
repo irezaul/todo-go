@@ -27,15 +27,19 @@ psql
 ```bash
 \q
 ```
-###  Creating a New Database
+###  Creating a New Database ( `use semicolon must` )
 ```bash
-create database <dbname>
+create database <dbname>;
 ```
-* check database list
+* check database list 
 ```bash
 \list
 ```
-* how to delete database
+* how to delete database ( `use semicolon must` )
 ```bash
-drop database <dbname>
+drop database <dbname>;
 ```
+* Create a new user with password ( `use semicolon must` )
+``` bash
+create user <username> with password 'pass';
+
