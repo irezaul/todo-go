@@ -2,27 +2,34 @@
 A simply activity
 
 
-### Couchbase install -- >
-## On Ubuntu 22.04;
-#### First run this command
+### Database
+* Installing PostgreSQL
 ```bash
-echo 'deb [ arch=amd64 ] http://packages.couchbase.com/releases/couchbase-server/community/deb/ focal focal/main' \
-> /etc/apt/sources.list.d/couchbase.list
-```
-* install repository signing key :
-```bash
-wget -qO- http://packages.couchbase.com/ubuntu/couchbase.key | gpg --dearmor > /etc/apt/trusted.gpg.d/couchbase.gpg
-```
-* Run system update
-```bash
- sudo apt-get update
+$ sudo apt update
 
- apt update
-```
-* install Couchbase on Ubuntu 22.04
-```bash
-apt install couchbase-server-community
-```
-###  Now check couchbase install or not open your browser and type `localhost:8091`
+Then, install the Postgres package along with a -contrib package that adds some additional utilities and functionality:
 
-![couchebase-install-done](https://user-images.githubusercontent.com/77927449/180840578-73a9977a-82e9-48ee-a343-5bccf9c926c8.png)
+$ sudo apt install postgresql postgresql-contrib
+```
+* Ensure that the server is running using the systemctl start command:
+```bash
+sudo systemctl start postgresql.service
+```
+* Switch over to the postgres account on your server by typing:
+```bash
+sudo -i -u postgres
+```
+* You can now access the PostgreSQL prompt immediately by typing:
+```bash
+psql
+```
+* `Exit out` of the PostgreSQL prompt by typing:
+```bash
+\q
+```
+###  Creating a New Role
+* If you are logged in as the postgres account, you can create a new user by typing:
+```bash
+createuser --interactive
+```
+#### Important- ( Currently, you just have the postgres role configured within the database. You can create new roles from the command line with the `createrole` command. The `--interactive` flag will prompt you for the name of the new role and also ask whether it should have superuser permissions. )
