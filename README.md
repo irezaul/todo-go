@@ -31,3 +31,11 @@ psql
 ```bash
 create database <dbname>
 ```
+* check database list
+```bash
+\list
+```
+* how to delete database
+```bash
+drop database <dbname>
+```
