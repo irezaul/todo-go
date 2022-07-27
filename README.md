@@ -42,4 +42,4 @@ drop database <dbname>;
 * Create a new user with password ( `use semicolon must` )
 ``` bash
 create user <username> with password 'pass';
-
+```
